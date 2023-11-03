@@ -19,15 +19,15 @@ document.write(name + "######Wilder duarte");
 document.getElementById("box_one").innerHTML = "<h1>Wilder Duarte</h1>"
 document.getElementById("box_two").innerText = "<h1>Wilder Duarte</h1>"
 // librerias
-// Swal.fire({
-//     icon: 'error',
-//     showConfirmButton: false,
-//     title:name,
-//     text:name,
-//     footer: "footer " + name,
-//     background: 'green',
-//     position: 'top-start'
-// });
+Swal.fire({
+     icon: 'error',
+     showConfirmButton: false,
+     title:name,
+     text:name,
+     footer: "footer " + name,
+     background: 'green',
+     position: 'top-start'
+});
 
 
 // ############### tipos de datos
@@ -71,3 +71,58 @@ console.log("Division = "+divi.toFixed(2));
 // modulo
 var modulo = number_one % number_two;
 console.log("Modulo = "+modulo);
+// operadores logicos y estructuras condicionales (inverse, incremento y decremento)
+// And && con if - Ampersand
+var bool = false;
+var numeric = "10";
+if(!bool && numeric === "10"){ //bool == true
+    console.log("ENTRA IF");
+}
+else{
+    console.log("ENTRA ELSE");
+}
+
+if(!bool || numeric == 7){
+    console.log("ENTRA IF");
+    numeric++;
+}else{
+    console.log("ENTRA ELSE");
+    numeric--;
+}
+console.log(numeric)
+//FOR 
+// for(let j = 0; j<array_text.length; j++){
+//     console.log(array_text[j]+" "+(j+1))
+// }
+// while
+// let f = 0;
+// while(f<array_text.length){
+//     console.log(array_text[f]+" "+(f+1));   
+//     f++
+// }
+// do while
+let x = 0;
+do{
+    console.log(array_text[x]+" "+(x+1));
+    x++;
+}while(x<array_text.length);
+
+// FUNCIONES Y EVENTOS
+
+function load_page(){
+    alert("LA PAGINA SE HA CARGADO CORRECTAMENTE");
+}
+function change_Color(){
+    document.body.style.backgroundColor="red";
+    document.body.style.color="white";
+}
+
+const clear_color = document.querySelector("#clear_color");
+clear_color.addEventListener("dblclick",() => {
+    document.body.style.backgroundColor="#fff";
+    document.body.style.color="#000";
+})
+
+// REGISTRO FORMULARIO
+const form_register = document.getElementById("form_register");
+
